@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 import OpenAI from 'openai';
 
-export function createOpenAIInstance() {
+function createOpenAIInstance() {
   try {
     const openai = new OpenAI();
     return openai;
@@ -11,3 +11,5 @@ export function createOpenAIInstance() {
     return null;
   }
 }
+
+export const openai = createOpenAIInstance();
